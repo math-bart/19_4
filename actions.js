@@ -10,8 +10,8 @@ export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 {
     type: ADD_COMMENT,
     text: 'My first comment !'
-	id: 20,
-	thumbState: 0
+    id: 20,
+    thumbState: 0
 }
 
 {
@@ -42,38 +42,38 @@ function addComment(text) {
         type: ADD_COMMENT,
         text,
         id: uuid.v4(),
-		thumbState: 0
+        thumbState: 0
     }
 }
 
 function remComment(id) {
-	return {
-		type: REMOVE_COMMENT,
+    return {
+        type: REMOVE_COMMENT,
         id
     }
 }
 
 function editComment(id, text) {
-	return {
+    return {
         type: EDIT_COMMENT,
-		id,
-		text
+        id,
+        text
     }
 }
 
 function thumbUpComment(id, thumbState) {
-	return {
-		type: THUMB_UP_COMMENT,
+    return {
+        type: THUMB_UP_COMMENT,
         id,
-		thumbState: thumbState + 1
+        thumbState: thumbState + 1
     }
 }
 
 function thumbDownComment(id, thumbState) {
-	return {
-		type: THUMB_DOWN_COMMENT,
+    return {
+        type: THUMB_DOWN_COMMENT,
         id,
-		thumbState: thumbState + 1
+        thumbState: thumbState + 1
     }
 }
 
